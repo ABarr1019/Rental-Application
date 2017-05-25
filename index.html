@@ -28,11 +28,21 @@
 			<div class="col-sm-4">
 				<input type="email" class="form-control" id="email" placeholder="Email:">
 			</div>
-			<div class="col-sm-4">
-				<input type="text" class="form-control" id="SSN" placeholder="SSN:">
+			<label>SSN:</label>
+			<div class="col-sm-1">
+
+		        <input type="text" id="SSNArea" class="form-control input-group" maxlength="3" placeholder="XXX" required />
+		    </div>
+		    <span class="color-gray padding-left-and-right-five-px">-</span>
+		    <div class="col-sm-1">
+		        <input type="text" id="SSNGroup" class="form-control input-group" maxlength="2" placeholder="XX" required />
+		    </div>
+		    <span class="color-gray padding-left-and-right-five-px">-</span>
+		    <div class="col-sm-1">
+		        <input type="text" id="SSNSerial" class="form-control input-group" maxlength="4" placeholder="XXX" required />
 			</div>
 			<div class="col-sm-4">
-				<input type="phone" class="form-control" id="phone" placeholder="Phone:">
+				<input class="form-control" type="tel" placeholder="(555)-555-5555" id="example-tel-input" maxlength="10">
 			</div>
 		</div>
 
@@ -44,29 +54,78 @@
 
 		<div class="form-group row">
 			<div class="col-sm-4">
-				<input type="city" class="form-control" id="city" placeholder="City:">
+				<input type="city" for="city" class="form-control" id="city" placeholder="City:">
 			</div>
 			<div class="col-sm-4">
-				<input type="state" class="form-control" id="state" placeholder="State:">
+				<select  class="form-control" name="state" id="state">
+				  <option value="" selected="selected">Select a State</option>
+				  <option value="AL">Alabama</option>
+				  <option value="AK">Alaska</option>
+				  <option value="AZ">Arizona</option>
+				  <option value="AR">Arkansas</option>
+				  <option value="CA">California</option>
+				  <option value="CO">Colorado</option>
+				  <option value="CT">Connecticut</option>
+				  <option value="DE">Delaware</option>
+				  <option value="DC">District Of Columbia</option>
+				  <option value="FL">Florida</option>
+				  <option value="GA">Georgia</option>
+				  <option value="HI">Hawaii</option>
+				  <option value="ID">Idaho</option>
+				  <option value="IL">Illinois</option>
+				  <option value="IN">Indiana</option>
+				  <option value="IA">Iowa</option>
+				  <option value="KS">Kansas</option>
+				  <option value="KY">Kentucky</option>
+				  <option value="LA">Louisiana</option>
+				  <option value="ME">Maine</option>
+				  <option value="MD">Maryland</option>
+				  <option value="MA">Massachusetts</option>
+				  <option value="MI">Michigan</option>
+				  <option value="MN">Minnesota</option>
+				  <option value="MS">Mississippi</option>
+				  <option value="MO">Missouri</option>
+				  <option value="MT">Montana</option>
+				  <option value="NE">Nebraska</option>
+				  <option value="NV">Nevada</option>
+				  <option value="NH">New Hampshire</option>
+				  <option value="NJ">New Jersey</option>
+				  <option value="NM">New Mexico</option>
+				  <option value="NY">New York</option>
+				  <option value="NC">North Carolina</option>
+				  <option value="ND">North Dakota</option>
+				  <option value="OH">Ohio</option>
+				  <option value="OK">Oklahoma</option>
+				  <option value="OR">Oregon</option>
+				  <option value="PA">Pennsylvania</option>
+				  <option value="RI">Rhode Island</option>
+				  <option value="SC">South Carolina</option>
+				  <option value="SD">South Dakota</option>
+				  <option value="TN">Tennessee</option>
+				  <option value="TX">Texas</option>
+				  <option value="UT">Utah</option>
+				  <option value="VT">Vermont</option>
+				  <option value="VA">Virginia</option>
+				  <option value="WA">Washington</option>
+				  <option value="WV">West Virginia</option>
+				  <option value="WI">Wisconsin</option>
+				  <option value="WY">Wyoming</option>
+				</select>
 			</div>
 			<div class="col-sm-4">
-				<input type="zip code" class="form-control" id="zip code" placeholder="Zip Code:">
+				<input type="text" maxlength="5" class="form-control" id="zip code" placeholder="Zip Code:">
 			</div>
 		</div>
 		<div class="form-group row">
 
-			<div class="form-check form-check-inline">
-				  <label class="form-check-label"> 
-				    <input class="form-check-input" type="checkbox" id="iOwn" value="option1"> Own
-				  </label>
-			</div>
-			<div class="form-check form-check-inline">
-				  <label class="form-check-label">
-				    <input class="form-check-input" type="checkbox" id="iRent" value="option2"> Rent
-				  </label>
+			<div class="col-sm-4">
+				<select class="form-control" id="rentOwn">
+					<option>Owned</option>
+					<option>Rented</option>
+				</select>
 			</div>
 			<div class="col-sm-4">
-					<input type="text" class="form-control" id="monthlyRent" placeholder="Monthly payment or rent:">
+					<input type="money" class="form-control" id="monthlyRent" placeholder="Monthly payment or rent:">
 			</div>
 			<div class="col-sm-4">
 					<input type="text" class="form-control" id="howLong" placeholder="How Long?">
@@ -84,23 +143,72 @@
 				<input type="city" class="form-control" id="preCity" placeholder="City:">
 			</div>
 			<div class="col-sm-4">
-				<input type="state" class="form-control" id="preState" placeholder="State:">
+				<select  class="form-control" name="state" id="state">
+				  <option value="" selected="selected">Select a State</option>
+				  <option value="AL">Alabama</option>
+				  <option value="AK">Alaska</option>
+				  <option value="AZ">Arizona</option>
+				  <option value="AR">Arkansas</option>
+				  <option value="CA">California</option>
+				  <option value="CO">Colorado</option>
+				  <option value="CT">Connecticut</option>
+				  <option value="DE">Delaware</option>
+				  <option value="DC">District Of Columbia</option>
+				  <option value="FL">Florida</option>
+				  <option value="GA">Georgia</option>
+				  <option value="HI">Hawaii</option>
+				  <option value="ID">Idaho</option>
+				  <option value="IL">Illinois</option>
+				  <option value="IN">Indiana</option>
+				  <option value="IA">Iowa</option>
+				  <option value="KS">Kansas</option>
+				  <option value="KY">Kentucky</option>
+				  <option value="LA">Louisiana</option>
+				  <option value="ME">Maine</option>
+				  <option value="MD">Maryland</option>
+				  <option value="MA">Massachusetts</option>
+				  <option value="MI">Michigan</option>
+				  <option value="MN">Minnesota</option>
+				  <option value="MS">Mississippi</option>
+				  <option value="MO">Missouri</option>
+				  <option value="MT">Montana</option>
+				  <option value="NE">Nebraska</option>
+				  <option value="NV">Nevada</option>
+				  <option value="NH">New Hampshire</option>
+				  <option value="NJ">New Jersey</option>
+				  <option value="NM">New Mexico</option>
+				  <option value="NY">New York</option>
+				  <option value="NC">North Carolina</option>
+				  <option value="ND">North Dakota</option>
+				  <option value="OH">Ohio</option>
+				  <option value="OK">Oklahoma</option>
+				  <option value="OR">Oregon</option>
+				  <option value="PA">Pennsylvania</option>
+				  <option value="RI">Rhode Island</option>
+				  <option value="SC">South Carolina</option>
+				  <option value="SD">South Dakota</option>
+				  <option value="TN">Tennessee</option>
+				  <option value="TX">Texas</option>
+				  <option value="UT">Utah</option>
+				  <option value="VT">Vermont</option>
+				  <option value="VA">Virginia</option>
+				  <option value="WA">Washington</option>
+				  <option value="WV">West Virginia</option>
+				  <option value="WI">Wisconsin</option>
+				  <option value="WY">Wyoming</option>
+				</select>
 			</div>
 			<div class="col-sm-4">
-				<input type="zip code" class="form-control" id="preZip code" placeholder="Zip Code:">
+				<input type="text" maxlength="5" class="form-control" id="zip code" placeholder="Zip Code:">
 			</div>
 		</div>
 		<div class="form-group row">
 
-			<div class="form-check form-check-inline">
-				  <label class="form-check-label"> 
-				    <input class="form-check-input" type="checkbox" id="preOwn" value="option1"> Own
-				  </label>
-			</div>
-			<div class="form-check form-check-inline">
-				  <label class="form-check-label">
-				    <input class="form-check-input" type="checkbox" id="preRent" value="option2"> Rent
-				  </label>
+			<div class="col-sm-4">
+				<select class="form-control" id="rentOwn">
+					<option>Owned</option>
+					<option>Rented</option>
+				</select>
 			</div>
 			<div class="col-sm-4">
 					<input type="text" class="form-control" id="preMonthlyRent" placeholder="Monthly payment or rent:">
@@ -129,7 +237,7 @@
 		</div>
 		<div class="form-group row">
 			<div class="col-sm-4">
-				<input type="phone" class="form-control" id="employerPhone" placeholder="Phone:">
+				<input class="form-control" type="tel" placeholder="(555)-555-5555" id="employerPhone" maxlength="10">
 			</div>
 			<div class="col-sm-4">
 				<input type="email" class="form-control" id="employerEmail" placeholder="Email:">
@@ -143,10 +251,63 @@
 				<input type="city" class="form-control" id="employerCity" placeholder="City:">
 			</div>
 			<div class="col-sm-4">
-				<input type="state" class="form-control" id="employerState" placeholder="State:">
+				<select  class="form-control" name="state" id="state">
+				  <option value="" selected="selected">Select a State</option>
+				  <option value="AL">Alabama</option>
+				  <option value="AK">Alaska</option>
+				  <option value="AZ">Arizona</option>
+				  <option value="AR">Arkansas</option>
+				  <option value="CA">California</option>
+				  <option value="CO">Colorado</option>
+				  <option value="CT">Connecticut</option>
+				  <option value="DE">Delaware</option>
+				  <option value="DC">District Of Columbia</option>
+				  <option value="FL">Florida</option>
+				  <option value="GA">Georgia</option>
+				  <option value="HI">Hawaii</option>
+				  <option value="ID">Idaho</option>
+				  <option value="IL">Illinois</option>
+				  <option value="IN">Indiana</option>
+				  <option value="IA">Iowa</option>
+				  <option value="KS">Kansas</option>
+				  <option value="KY">Kentucky</option>
+				  <option value="LA">Louisiana</option>
+				  <option value="ME">Maine</option>
+				  <option value="MD">Maryland</option>
+				  <option value="MA">Massachusetts</option>
+				  <option value="MI">Michigan</option>
+				  <option value="MN">Minnesota</option>
+				  <option value="MS">Mississippi</option>
+				  <option value="MO">Missouri</option>
+				  <option value="MT">Montana</option>
+				  <option value="NE">Nebraska</option>
+				  <option value="NV">Nevada</option>
+				  <option value="NH">New Hampshire</option>
+				  <option value="NJ">New Jersey</option>
+				  <option value="NM">New Mexico</option>
+				  <option value="NY">New York</option>
+				  <option value="NC">North Carolina</option>
+				  <option value="ND">North Dakota</option>
+				  <option value="OH">Ohio</option>
+				  <option value="OK">Oklahoma</option>
+				  <option value="OR">Oregon</option>
+				  <option value="PA">Pennsylvania</option>
+				  <option value="RI">Rhode Island</option>
+				  <option value="SC">South Carolina</option>
+				  <option value="SD">South Dakota</option>
+				  <option value="TN">Tennessee</option>
+				  <option value="TX">Texas</option>
+				  <option value="UT">Utah</option>
+				  <option value="VT">Vermont</option>
+				  <option value="VA">Virginia</option>
+				  <option value="WA">Washington</option>
+				  <option value="WV">West Virginia</option>
+				  <option value="WI">Wisconsin</option>
+				  <option value="WY">Wyoming</option>
+				</select>
 			</div>
 			<div class="col-sm-4">
-				<input type="zip code" class="form-control" id="employerZip code" placeholder="Zip Code:">
+				<input type="text" maxlength="5" class="form-control" id="zip code" placeholder="Zip Code:">
 			</div>
 		</div>		
 		<div class="form-group row">
@@ -154,16 +315,12 @@
 				<input type="text" class="form-control" id="position" placeholder="Position:">
 			</div>
 
-		<div class="form-check-inline">
-			<label class="form-check-label">
-				<input class="form-check-input" type="checkbox" id="hourly"> Hourly
-			</label>
-		</div>
-		<div class="form-check-inline">
-			<label class="form-check-label">
-				<input class="form-check-input" type="checkbox" id="salary"> Salary
-			</label>
-		</div>
+		<div class="col-sm-4">
+				<select class="form-control" id="rentOwn">
+					<option>Hourly</option>
+					<option>Salary</option>
+				</select>
+			</div>
 		<div class="col-sm-4">
 			<input type="money" class="form-control" id="income" placeholder="Annual Income:">
 		</div>
@@ -186,10 +343,63 @@
 				<input type="city" class="form-control" id="emergencyCity" placeholder="City:">			
 		</div>
 		<div class="col-sm-4">
-			<input type="state" class="form-control" id="emergencyState" placeholder="State:">
-		</div>
+				<select  class="form-control" name="state" id="state">
+				  <option value="" selected="selected">Select a State</option>
+				  <option value="AL">Alabama</option>
+				  <option value="AK">Alaska</option>
+				  <option value="AZ">Arizona</option>
+				  <option value="AR">Arkansas</option>
+				  <option value="CA">California</option>
+				  <option value="CO">Colorado</option>
+				  <option value="CT">Connecticut</option>
+				  <option value="DE">Delaware</option>
+				  <option value="DC">District Of Columbia</option>
+				  <option value="FL">Florida</option>
+				  <option value="GA">Georgia</option>
+				  <option value="HI">Hawaii</option>
+				  <option value="ID">Idaho</option>
+				  <option value="IL">Illinois</option>
+				  <option value="IN">Indiana</option>
+				  <option value="IA">Iowa</option>
+				  <option value="KS">Kansas</option>
+				  <option value="KY">Kentucky</option>
+				  <option value="LA">Louisiana</option>
+				  <option value="ME">Maine</option>
+				  <option value="MD">Maryland</option>
+				  <option value="MA">Massachusetts</option>
+				  <option value="MI">Michigan</option>
+				  <option value="MN">Minnesota</option>
+				  <option value="MS">Mississippi</option>
+				  <option value="MO">Missouri</option>
+				  <option value="MT">Montana</option>
+				  <option value="NE">Nebraska</option>
+				  <option value="NV">Nevada</option>
+				  <option value="NH">New Hampshire</option>
+				  <option value="NJ">New Jersey</option>
+				  <option value="NM">New Mexico</option>
+				  <option value="NY">New York</option>
+				  <option value="NC">North Carolina</option>
+				  <option value="ND">North Dakota</option>
+				  <option value="OH">Ohio</option>
+				  <option value="OK">Oklahoma</option>
+				  <option value="OR">Oregon</option>
+				  <option value="PA">Pennsylvania</option>
+				  <option value="RI">Rhode Island</option>
+				  <option value="SC">South Carolina</option>
+				  <option value="SD">South Dakota</option>
+				  <option value="TN">Tennessee</option>
+				  <option value="TX">Texas</option>
+				  <option value="UT">Utah</option>
+				  <option value="VT">Vermont</option>
+				  <option value="VA">Virginia</option>
+				  <option value="WA">Washington</option>
+				  <option value="WV">West Virginia</option>
+				  <option value="WI">Wisconsin</option>
+				  <option value="WY">Wyoming</option>
+				</select>
+			</div>
 		<div class="col-sm-4">
-			<input type="zip code" class="form-control" id="emergencyZip code" placeholder="Zip Code:">
+			<input type="text" maxlength="5" class="form-control" id="zip code" placeholder="Zip Code:">
 		</div>
 	</div>
 	<div class="form-group row">
@@ -212,8 +422,18 @@
 			<div class="col-sm-4">
 				<input type="email" class="form-control" id="coEmail" placeholder="Email:">
 			</div>
-			<div class="col-sm-4">
-				<input type="text" class="form-control" id="coSSN" placeholder="SSN:">
+			<label>SSN:</label>
+			<div class="col-sm-1">
+
+		        <input type="text" id="SSNArea" class="form-control input-group" maxlength="3" placeholder="XXX" required />
+		    </div>
+		    <span class="color-gray padding-left-and-right-five-px">-</span>
+		    <div class="col-sm-1">
+		        <input type="text" id="SSNGroup" class="form-control input-group" maxlength="2" placeholder="XX" required />
+		    </div>
+		    <span class="color-gray padding-left-and-right-five-px">-</span>
+		    <div class="col-sm-1">
+		        <input type="text" id="SSNSerial" class="form-control input-group" maxlength="4" placeholder="XXX" required />
 			</div>
 			<div class="col-sm-4">
 				<input type="phone" class="form-control" id="coPhone" placeholder="Phone:">
@@ -231,23 +451,72 @@
 				<input type="city" class="form-control" id="coCity" placeholder="City:">
 			</div>
 			<div class="col-sm-4">
-				<input type="state" class="form-control" id="coState" placeholder="State:">
+				<select  class="form-control" name="state" id="state">
+				  <option value="" selected="selected">Select a State</option>
+				  <option value="AL">Alabama</option>
+				  <option value="AK">Alaska</option>
+				  <option value="AZ">Arizona</option>
+				  <option value="AR">Arkansas</option>
+				  <option value="CA">California</option>
+				  <option value="CO">Colorado</option>
+				  <option value="CT">Connecticut</option>
+				  <option value="DE">Delaware</option>
+				  <option value="DC">District Of Columbia</option>
+				  <option value="FL">Florida</option>
+				  <option value="GA">Georgia</option>
+				  <option value="HI">Hawaii</option>
+				  <option value="ID">Idaho</option>
+				  <option value="IL">Illinois</option>
+				  <option value="IN">Indiana</option>
+				  <option value="IA">Iowa</option>
+				  <option value="KS">Kansas</option>
+				  <option value="KY">Kentucky</option>
+				  <option value="LA">Louisiana</option>
+				  <option value="ME">Maine</option>
+				  <option value="MD">Maryland</option>
+				  <option value="MA">Massachusetts</option>
+				  <option value="MI">Michigan</option>
+				  <option value="MN">Minnesota</option>
+				  <option value="MS">Mississippi</option>
+				  <option value="MO">Missouri</option>
+				  <option value="MT">Montana</option>
+				  <option value="NE">Nebraska</option>
+				  <option value="NV">Nevada</option>
+				  <option value="NH">New Hampshire</option>
+				  <option value="NJ">New Jersey</option>
+				  <option value="NM">New Mexico</option>
+				  <option value="NY">New York</option>
+				  <option value="NC">North Carolina</option>
+				  <option value="ND">North Dakota</option>
+				  <option value="OH">Ohio</option>
+				  <option value="OK">Oklahoma</option>
+				  <option value="OR">Oregon</option>
+				  <option value="PA">Pennsylvania</option>
+				  <option value="RI">Rhode Island</option>
+				  <option value="SC">South Carolina</option>
+				  <option value="SD">South Dakota</option>
+				  <option value="TN">Tennessee</option>
+				  <option value="TX">Texas</option>
+				  <option value="UT">Utah</option>
+				  <option value="VT">Vermont</option>
+				  <option value="VA">Virginia</option>
+				  <option value="WA">Washington</option>
+				  <option value="WV">West Virginia</option>
+				  <option value="WI">Wisconsin</option>
+				  <option value="WY">Wyoming</option>
+				</select>
 			</div>
 			<div class="col-sm-4">
-				<input type="zip code" class="form-control" id="coZip code" placeholder="Zip Code:">
+				<input type="text" maxlength="5" class="form-control" id="zip code" placeholder="Zip Code:">
 			</div>
 		</div>
 		<div class="form-group row">
 
-			<div class="form-check form-check-inline">
-				  <label class="form-check-label"> 
-				    <input class="form-check-input" type="checkbox" id="coOwn" value="option1"> Own
-				  </label>
-			</div>
-			<div class="form-check form-check-inline">
-				  <label class="form-check-label">
-				    <input class="form-check-input" type="checkbox" id="coRent" value="option2"> Rent
-				  </label>
+			<div class="col-sm-4">
+				<select class="form-control" id="rentOwn">
+					<option>Owned</option>
+					<option>Rented</option>
+				</select>
 			</div>
 			<div class="col-sm-4">
 					<input type="text" class="form-control" id="coMonthlyRent" placeholder="Monthly payment or rent:">
@@ -267,23 +536,72 @@
 				<input type="city" class="form-control" id="coPreCity" placeholder="City:">
 			</div>
 			<div class="col-sm-4">
-				<input type="state" class="form-control" id="coPreState" placeholder="State:">
+				<select  class="form-control" name="state" id="state">
+				  <option value="" selected="selected">Select a State</option>
+				  <option value="AL">Alabama</option>
+				  <option value="AK">Alaska</option>
+				  <option value="AZ">Arizona</option>
+				  <option value="AR">Arkansas</option>
+				  <option value="CA">California</option>
+				  <option value="CO">Colorado</option>
+				  <option value="CT">Connecticut</option>
+				  <option value="DE">Delaware</option>
+				  <option value="DC">District Of Columbia</option>
+				  <option value="FL">Florida</option>
+				  <option value="GA">Georgia</option>
+				  <option value="HI">Hawaii</option>
+				  <option value="ID">Idaho</option>
+				  <option value="IL">Illinois</option>
+				  <option value="IN">Indiana</option>
+				  <option value="IA">Iowa</option>
+				  <option value="KS">Kansas</option>
+				  <option value="KY">Kentucky</option>
+				  <option value="LA">Louisiana</option>
+				  <option value="ME">Maine</option>
+				  <option value="MD">Maryland</option>
+				  <option value="MA">Massachusetts</option>
+				  <option value="MI">Michigan</option>
+				  <option value="MN">Minnesota</option>
+				  <option value="MS">Mississippi</option>
+				  <option value="MO">Missouri</option>
+				  <option value="MT">Montana</option>
+				  <option value="NE">Nebraska</option>
+				  <option value="NV">Nevada</option>
+				  <option value="NH">New Hampshire</option>
+				  <option value="NJ">New Jersey</option>
+				  <option value="NM">New Mexico</option>
+				  <option value="NY">New York</option>
+				  <option value="NC">North Carolina</option>
+				  <option value="ND">North Dakota</option>
+				  <option value="OH">Ohio</option>
+				  <option value="OK">Oklahoma</option>
+				  <option value="OR">Oregon</option>
+				  <option value="PA">Pennsylvania</option>
+				  <option value="RI">Rhode Island</option>
+				  <option value="SC">South Carolina</option>
+				  <option value="SD">South Dakota</option>
+				  <option value="TN">Tennessee</option>
+				  <option value="TX">Texas</option>
+				  <option value="UT">Utah</option>
+				  <option value="VT">Vermont</option>
+				  <option value="VA">Virginia</option>
+				  <option value="WA">Washington</option>
+				  <option value="WV">West Virginia</option>
+				  <option value="WI">Wisconsin</option>
+				  <option value="WY">Wyoming</option>
+				</select>
 			</div>
 			<div class="col-sm-4">
-				<input type="zip code" class="form-control" id="CopreZip code" placeholder="Zip Code:">
+				<input type="text" maxlength="5" class="form-control" id="zip code" placeholder="Zip Code:">
 			</div>
 		</div>
 		<div class="form-group row">
 
-			<div class="form-check form-check-inline">
-				  <label class="form-check-label"> 
-				    <input class="form-check-input" type="checkbox" id="coPreOwn" value="option1"> Own
-				  </label>
-			</div>
-			<div class="form-check form-check-inline">
-				  <label class="form-check-label">
-				    <input class="form-check-input" type="checkbox" id="coPreRent" value="option2"> Rent
-				  </label>
+			<div class="col-sm-4">
+				<select class="form-control" id="rentOwn">
+					<option>Owned</option>
+					<option>Rented</option>
+				</select>
 			</div>
 			<div class="col-sm-4">
 					<input type="text" class="form-control" id="coPreMonthlyRent" placeholder="Monthly payment or rent:">
@@ -325,10 +643,63 @@
 				<input type="city" class="form-control" id="coEmployerCity" placeholder="City:">
 			</div>
 			<div class="col-sm-4">
-				<input type="state" class="form-control" id="coEmployerState" placeholder="State:">
+				<select  class="form-control" name="state" id="state">
+				  <option value="" selected="selected">Select a State</option>
+				  <option value="AL">Alabama</option>
+				  <option value="AK">Alaska</option>
+				  <option value="AZ">Arizona</option>
+				  <option value="AR">Arkansas</option>
+				  <option value="CA">California</option>
+				  <option value="CO">Colorado</option>
+				  <option value="CT">Connecticut</option>
+				  <option value="DE">Delaware</option>
+				  <option value="DC">District Of Columbia</option>
+				  <option value="FL">Florida</option>
+				  <option value="GA">Georgia</option>
+				  <option value="HI">Hawaii</option>
+				  <option value="ID">Idaho</option>
+				  <option value="IL">Illinois</option>
+				  <option value="IN">Indiana</option>
+				  <option value="IA">Iowa</option>
+				  <option value="KS">Kansas</option>
+				  <option value="KY">Kentucky</option>
+				  <option value="LA">Louisiana</option>
+				  <option value="ME">Maine</option>
+				  <option value="MD">Maryland</option>
+				  <option value="MA">Massachusetts</option>
+				  <option value="MI">Michigan</option>
+				  <option value="MN">Minnesota</option>
+				  <option value="MS">Mississippi</option>
+				  <option value="MO">Missouri</option>
+				  <option value="MT">Montana</option>
+				  <option value="NE">Nebraska</option>
+				  <option value="NV">Nevada</option>
+				  <option value="NH">New Hampshire</option>
+				  <option value="NJ">New Jersey</option>
+				  <option value="NM">New Mexico</option>
+				  <option value="NY">New York</option>
+				  <option value="NC">North Carolina</option>
+				  <option value="ND">North Dakota</option>
+				  <option value="OH">Ohio</option>
+				  <option value="OK">Oklahoma</option>
+				  <option value="OR">Oregon</option>
+				  <option value="PA">Pennsylvania</option>
+				  <option value="RI">Rhode Island</option>
+				  <option value="SC">South Carolina</option>
+				  <option value="SD">South Dakota</option>
+				  <option value="TN">Tennessee</option>
+				  <option value="TX">Texas</option>
+				  <option value="UT">Utah</option>
+				  <option value="VT">Vermont</option>
+				  <option value="VA">Virginia</option>
+				  <option value="WA">Washington</option>
+				  <option value="WV">West Virginia</option>
+				  <option value="WI">Wisconsin</option>
+				  <option value="WY">Wyoming</option>
+				</select>
 			</div>
 			<div class="col-sm-4">
-				<input type="zip code" class="form-control" id="coEmployerZip code" placeholder="Zip Code:">
+				<input type="text" maxlength="5" class="form-control" id="zip code" placeholder="Zip Code:">
 			</div>
 		</div>		
 		<div class="form-group row">
@@ -336,16 +707,12 @@
 				<input type="text" class="form-control" id="coPosition" placeholder="Position:">
 			</div>
 
-		<div class="form-check-inline">
-			<label class="form-check-label">
-				<input class="form-check-input" type="checkbox" id="coHourly"> Hourly
-			</label>
-		</div>
-		<div class="form-check-inline">
-			<label class="form-check-label">
-				<input class="form-check-input" type="checkbox" id="coSalary"> Salary
-			</label>
-		</div>
+		<div class="col-sm-4">
+				<select class="form-control" id="rentOwn">
+					<option>Hourly</option>
+					<option>Salary</option>
+				</select>
+			</div>
 		<div class="col-sm-4">
 			<input type="money" class="form-control" id="coIncome" placeholder="Annual Income:">
 		</div>
@@ -374,7 +741,7 @@
 				<input type="text" class="form-control" id="refOneAddress" placeholder="">
 			</div>
 			<div class="col-sm-4">
-				<input type="text" class="form-control" id="refOnePhone" placeholder="">
+				<input class="form-control" type="tel" placeholder="(555)-555-5555" id="refOnePhone" maxlength="10">
 			</div>
 	</div>
 			<div class="form-group row">
@@ -386,7 +753,7 @@
 				<input type="text" class="form-control" id="refOTwoAddress" placeholder="">
 			</div>
 			<div class="col-sm-4">
-				<input type="text" class="form-control" id="refOTwoPhone" placeholder="">
+				<input class="form-control" type="tel" placeholder="(555)-555-5555" id="refTwoPhone" maxlength="10">
 			</div>
 	</div>
 	<hr>
@@ -410,8 +777,9 @@
 			<input type="date" class="form-control" id="coSignDate" placeholder="Date:">
 		</div>
 	</div>
+	<button type="submit" class="btn btn-primary">Submit</button>
 </form>
-		
+		<p style="padding:20px;"></p>
 	
 
 	</div>
